@@ -162,4 +162,9 @@ Chinook Dataset, Ruby on Rails REST API example
                     PUT    /actors/:id(.:format)          actors#update
                     DELETE /actors/:id(.:format)          actors#destroy
     ```
+    - Making requests: 
+    <a href='https://marketplace.visualstudio.com/items?itemName=humao.rest-client'>Rest Client VS Code Extension</a>
+
+    ## Resources
+    
     - And this is essentially our REST API
