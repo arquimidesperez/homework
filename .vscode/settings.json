@@ -1,0 +1,23 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Rails Test Database",
+      "driver": "PostgreSQL",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "database": "myapp_test",
+      "username": "postgres"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "askForPassword": true,
+      "name": "Rails Development Database",
+      "driver": "PostgreSQL",
+      "database": "myapp_development",
+      "username": "postgres"
+    }
+  ]
+}

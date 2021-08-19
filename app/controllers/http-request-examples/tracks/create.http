@@ -1,0 +1,51 @@
+###
+# Example for:
+# GET    /tracks(.:format)              tracks#index
+GET http://localhost:3000/tracks HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /tracks/:id(.:format)          tracks#show
+GET http://localhost:3000/tracks/1 HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# POST   /tracks(.:format)              tracks#create
+POST http://localhost:3000/tracks HTTP/1.1
+content-type: application/json
+
+{
+  "track": {
+    "name": "Arqui's Cool New Track",
+    "album_id": 1,
+    "media_type_id": 2,
+    "genre_id": 1,
+    "composer": "Arqui Perez Leyva",
+    "milliseconds": 342562,
+    "bytes": 5510424,
+    "unit_price": "350.69"
+  }
+}
+
+###
+# Example for:
+# PATCH  /tracks/:id(.:format)          tracks#update
+PATCH http://localhost:3000/tracks/3504 HTTP/1.1
+content-type: application/json
+
+{
+  "track": {
+    "name": "Arqui's Cool New Track V2"
+  }
+}
+
+###
+# Example for:
+# DELETE /tracks/:id(.:format)          tracks#destroy
+DELETE http://localhost:3000/tracks/404 HTTP/1.1
+content-type: application/json
+
+
+

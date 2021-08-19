@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actor: one
+  film: one
+  last_update: 2021-08-14 21:21:44
+
+two:
+  actor: two
+  film: two
+  last_update: 2021-08-14 21:21:44
