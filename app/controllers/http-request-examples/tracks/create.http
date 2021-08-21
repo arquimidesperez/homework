@@ -1,13 +1,13 @@
 ###
 # Example for:
 # GET    /tracks(.:format)              tracks#index
-GET http://localhost:3000/tracks HTTP/1.1
+GET https://homework-chinook.herokuapp.com/tracks HTTP/1.1
 content-type: application/json
 
 ###
 # Example for:
 # GET    /tracks/:id(.:format)          tracks#show
-GET http://localhost:3000/tracks/1 HTTP/1.1
+GET https://homework-chinook.herokuapp.com/tracks/4 HTTP/1.1
 content-type: application/json
 
 ###
@@ -32,7 +32,7 @@ content-type: application/json
 ###
 # Example for:
 # PATCH  /tracks/:id(.:format)          tracks#update
-PATCH http://localhost:3000/tracks/3504 HTTP/1.1
+PATCH https://homework-chinook.herokuapp.com/tracks HTTP/1.1
 content-type: application/json
 
 {
