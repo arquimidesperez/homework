@@ -1,14 +1,31 @@
+# 
+# Tracks HTTP Requests
+# 
+
 ###
 # Example for:
 # GET    /tracks(.:format)              tracks#index
+GET http://localhost:3000/tracks HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /tracks/:id(.:format)              tracks#index
+GET http://localhost:3000/tracks/13 HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /tracks/:id(.:format)          tracks#show
 GET https://homework-chinook.herokuapp.com/tracks HTTP/1.1
 content-type: application/json
 
 ###
 # Example for:
 # GET    /tracks/:id(.:format)          tracks#show
-GET https://homework-chinook.herokuapp.com/tracks/4 HTTP/1.1
+GET https://homework-chinook.herokuapp.com/tracks/21 HTTP/1.1
 content-type: application/json
+
 
 ###
 # Example for:
@@ -18,21 +35,52 @@ content-type: application/json
 
 {
   "track": {
-    "name": "Arqui's Cool New Track",
+    "name": "New Track",
     "album_id": 1,
     "media_type_id": 2,
     "genre_id": 1,
-    "composer": "Arqui Perez Leyva",
+    "composer": "Arqui",
     "milliseconds": 342562,
     "bytes": 5510424,
-    "unit_price": "350.69"
+    "unit_price": ".99"
+  }
+}
+
+###
+# Example for:
+# POST   /tracks(.:format)              tracks#create
+POST https://homework-chinook.herokuapp.com/tracks HTTP/1.1
+content-type: application/json
+
+{
+  "track": {
+    "name": "New Track",
+    "album_id": 1,
+    "media_type_id": 2,
+    "genre_id": 1,
+    "composer": "Arqui",
+    "milliseconds": 342562,
+    "bytes": 5510424,
+    "unit_price": ".99"
   }
 }
 
 ###
 # Example for:
 # PATCH  /tracks/:id(.:format)          tracks#update
-PATCH https://homework-chinook.herokuapp.com/tracks HTTP/1.1
+PATCH http://localhost:3000/tracks/3504 HTTP/1.1
+content-type: application/json
+
+{
+  "track": {
+    "name": "Arqui's Cool New Track V2"
+  }
+}
+
+###
+# Example for:
+# PATCH  /tracks/:id(.:format)          tracks#update
+PATCH https://homework-chinook.herokuapp.com/tracks/3504 HTTP/1.1
 content-type: application/json
 
 {
@@ -47,5 +95,98 @@ content-type: application/json
 DELETE http://localhost:3000/tracks/404 HTTP/1.1
 content-type: application/json
 
+###
+# Example for:
+# DELETE /tracks/:id(.:format)          tracks#destroy
+DELETE https://homework-chinook.herokuapp.com/tracks/404 HTTP/1.1
+content-type: application/json
+
+# 
+# Artists HTTP Requests
+# 
+
+###
+# Example for:
+# GET    /artists/:id(.:format)          artists#show
+GET http://localhost:3000/artists HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /artists/:id(.:format)          artists#show
+GET http://localhost:3000/artists/51 HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /artists/:id(.:format)          artists#show
+GET https://homework-chinook.herokuapp.com/artists HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# GET    /artists/:id(.:format)          artists#show
+GET https://homework-chinook.herokuapp.com/artists/51 HTTP/1.1
+content-type: application/json
 
 
+###
+# Example for:
+# POST   /artists(.:format)              artists#create
+POST http://localhost:3000/artists HTTP/1.1
+content-type: application/json
+
+{
+  "artist": {
+    "name": "Daft Punk"
+  }
+}
+
+###
+# Example for:
+# POST   /artists(.:format)              artists#create
+POST https://homework-chinook.herokuapp.com/artists HTTP/1.1
+content-type: application/json
+
+{
+  "artist": {
+    "name": "Daft Punk"
+  }
+}
+
+###
+# Example for:
+# PATCH  /artists/:id(.:format)          artists#update
+PATCH http://localhost:3000/tracks/276 HTTP/1.1
+content-type: application/json
+
+{
+  "artist": {
+    "name": "Stardust"
+  }
+}
+
+###
+# Example for:
+# PATCH  /artists/:id(.:format)          artists#update
+PATCH https://homework-chinook.herokuapp.com/artists/276 HTTP/1.1
+content-type: application/json
+
+{
+  "artist": {
+    "name": "Stardust"
+  }
+}
+
+
+###
+# Example for:
+# DELETE /artists/:id(.:format)          artists#destroy
+DELETE http://localhost:3000/artists/100 HTTP/1.1
+content-type: application/json
+
+###
+# Example for:
+# DELETE /artists/:id(.:format)          artists#destroy
+DELETE https://homework-chinook.herokuapp.com/artists/100 HTTP/1.1
+content-type: application/json

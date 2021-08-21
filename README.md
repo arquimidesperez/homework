@@ -167,17 +167,44 @@ Chinook Dataset, Ruby on Rails REST API example
 
     - And this is essentially our REST API
 
-    ## Resources
-    ### Schema to Scaffold
+## Resources
+### Schema to Scaffold
     <a href='https://github.com/frenesim/schema_to_scaffold'>Schema to Scaffold</a>
 
-    ### Docker
+### Docker
     <a href='https://docs.docker.com/samples/rails/'>
     Docker: Quickstart: Compose and Rails
     </a>
 
-    ### M1 Chip Issue
+### M1 Chip Issue
     <a href='https://github.com/evilmartians/terraforming-rails/issues/34'>
     M1 Chip 'Failed to initialize inotify' 
     </a>
     
+## Running the App
+
+Heroku deployed URL: <a href='https://homework-chinook.herokuapp.com/'>homework-chinook</a>
+
+Because the app was built with `--minimal` and `--api-only` it doesn't feature an inital landing page but data can be viewed by referencing routes such as `/tracks`.
+
+Examples of these API Requests can be found in `app/http-request-examples/create.http`
+
+To run these requests download the <a href='https://marketplace.visualstudio.com/items?itemName=humao.rest-client'>Rest Client</a> into your VS Code.
+
+```
+POST https://homework-chinook.herokuapp.com/tracks HTTP/1.1
+content-type: application/json
+
+{
+  "track": {
+    "name": "New Track",
+    "album_id": 1,
+    "media_type_id": 2,
+    "genre_id": 1,
+    "composer": "Arqui",
+    "milliseconds": 342562,
+    "bytes": 5510424,
+    "unit_price": ".99"
+  }
+}
+```
