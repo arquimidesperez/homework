@@ -169,15 +169,15 @@ Chinook Dataset, Ruby on Rails REST API example
 
 ## Resources
 ### Schema to Scaffold
-    <a href='https://github.com/frenesim/schema_to_scaffold'>Schema to Scaffold</a>
+  <a href='https://github.com/frenesim/schema_to_scaffold'>Schema to Scaffold</a>
 
 ### Docker
-    <a href='https://docs.docker.com/samples/rails/'>
+  <a href='https://docs.docker.com/samples/rails/'>
     Docker: Quickstart: Compose and Rails
     </a>
 
 ### M1 Chip Issue
-    <a href='https://github.com/evilmartians/terraforming-rails/issues/34'>
+  <a href='https://github.com/evilmartians/terraforming-rails/issues/34'>
     M1 Chip 'Failed to initialize inotify' 
     </a>
     
